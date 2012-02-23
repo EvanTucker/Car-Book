@@ -11,5 +11,15 @@ CREATE TABLE IF NOT EXISTS `users` (
 
 
 CREATE TABLE IF NOT EXISTS `cars` (
-  
+  vin CHAR(17) NOT NULL,
+  year_made CHAR(4),
+  make VARCHAR(20),
+  model VARCHAR(20),
+  mileage VARCHAR(6),
+  price DOUBLE,
+  color VARCHAR(15),
+  transmission VARCHAR(20),
+  description BLOB,
+  owner# CHAR(7),
+  PRIMARY KEY (vin),
 );
