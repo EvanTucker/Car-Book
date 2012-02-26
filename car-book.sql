@@ -40,6 +40,12 @@ CREATE TABLE IF NOT EXISTS `cars` (
   color VARCHAR(15),
   transmission VARCHAR(20),
   description BLOB,
-  owner# CHAR(7),
+  owner# CHAR(12),
   PRIMARY KEY (vin),
-);
+
+)ENGINE=MYISAM DEFAULT CHARSET=latin1 AUTO_INCREMENT=1;
+
+INSERT INTO `cars` VALUES(15787844787786473, '1999', 'Ford', 'Mustang', '143259', 23000, 'Green', '5 Speed Manual', ' '
+ , '757-331-4271'); 
+
+(
