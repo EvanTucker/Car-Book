@@ -1,3 +1,6 @@
+<?php
+	session_start();
+?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -11,6 +14,7 @@
 <div align = "center">
 	<img src="logo.jpg" alt="logo" />
 </div>
+<body bgcolor = "Silver">
 <div id="wrap">
 	<div class="pagewrapper">
 		<div class="innerpagewrapper">
@@ -20,12 +24,15 @@
 					<!-- CONTENT -->
 					<h3>New User Registration</h3>
 					
-					<form method = "post" action = "report2.php">
+					<form method = "post" action = "newUserComplete.php">
 					<table>
+					<tr><td>Username</td><td><input type = "text" id = "username" name = "username" /></td></tr>
+					<tr><td>Password</td><td><input type = "text" id = "password" name = "password" /></td></tr>
 					<tr><td>First Name</td><td><input type="text" id="firstname" name="firstname" /></td></tr>
 					<tr><td>Last Name</td><td><input type="text" id="lastname" name="lastname" /></td></tr>
 					<tr><td>Email</td><td><input type="text" id="email" name="email" /></td></tr>
 					<tr><td>Phone Number</td><td><input type="text" id="phone" name="phone" /></td></tr>
+					<tr><td>Zip Code</td><td><input type="text" name="zip" id="zip"/> 
 					<tr><td>Location (city)</td><td><input type="text" name="city" id="city"/> 
 					
 					<select name="state">
@@ -86,13 +93,17 @@
 						<input type = "radio" name = "carPref" value = "new" checked/>New<br>
 						<input type = "radio" name = "carPref" value = "used"/>Used<br>
 					</td></tr>
-					<tr><td>Interested in buying</td><td><input type = "checkbox" value = "slimey" name = "slimey"/></td></tr>
-					<tr><td>Interested in selling</td><td><input type = "checkbox" value = "furry" name = "furry"/></td></tr>
+					<tr><td>Interested in buying</td><td><input type = "checkbox" value = "buy" name = "buy"/></td></tr>
+					<tr><td>Interested in selling</td><td><input type = "checkbox" value = "sell" name = "sell"/></td></tr>
 					</br>
 					<tr><td>How long have been an automotive owner?<td><td>1 year <input type="range" name="ownerLength" min="1" max="20" step="1" value="5"/>20+</td></tr>
 					</br>
 					</br>
 					<tr><td>&nbsp;</td><td><input type="submit" value="Register" /></td></tr>
+					<?php
+    					//session_start();
+    					$_SESSION['firstname'] = $_POST['firstname'];
+    				?>
 					</table>
 					
 					</form>
@@ -106,7 +117,7 @@
 
 
 <TAGNAME bgcolor="value">
-<body bgcolor = "Silver">
+
 
 </div>
 <footer id="main">
