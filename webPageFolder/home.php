@@ -42,9 +42,11 @@
  -->
 		  <br>
 		  </br>
-		  <input type="submit" class="btnLogin" value="Find Car" tabindex="4">
+		  <div align = "center">
+		  	<input type="submit" class="btnLogin" value="Find Car" tabindex="4">
+		  </div>
 		</fieldset>
-		<footer>
+		<!--<footer>  -->
 		<?php
   include "dbconnect.php";
   if (isset($_POST['make']))
@@ -65,12 +67,12 @@
   			$mileage = $row['mileage'];
   			$trans = $row['transmission'];
   			$owner = $row['owner#'];
-  			echo "<tr><td >$make</td><td></td><td > $model</td><td></td><td >$year</td><td></td><td >$mileage</td><td></td><td >$trans</td><td></td><td >$owner</td></tr>\n";
-  	}
+  			echo "<tr><td >$make </td><td></td><td > $model</td><td></td><td > $year</td><td></td><td > $mileage</td><td></td><td > $trans</td><td></td><td > $owner</td></tr>\n";
+  	} 
   	 echo "</table>\n"; 
   	}
+  	
   	?>
-		</footer>
 	</form>
 	
 <footer id="main">
