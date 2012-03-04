@@ -39,10 +39,10 @@ CREATE TABLE IF NOT EXISTS `cars` (
   `price` DOUBLE,
   `color` VARCHAR(15),
   `transmission` VARCHAR(20),
-  `description` BLOB,
+  `description` VARCHAR(255),
   `owner#` CHAR(12),
   PRIMARY KEY (`vin`)
 
 );
 
-INSERT INTO `cars` (`vin`, `year_made`, `make`, `model`, `mileage`, `price`, `color`, `transmission`, `description`, `owner#`) VALUES('15787844787786473', '1999', 'Ford', 'Mustang', '143259', 23000, 'Green', '5 Speed Manual', 'blahblahblah', '757-331-4271'), ('123456789AII5699D', '1997', 'Lincoln', 'Towncar', '80000', '5700', 'Black', 'Automatic', ' ', '434-964-6743'), ('987654321GHD3465K', '2002', 'Toyota', 'Camry', '48000', 4500, 'Red', 'Automatic',  '  ', '540-344-6783'), ('8485683248348569HH', '2008', 'Jeep', 'Grand Cherokee', '60000', 7500, 'Green', '5 Speed Manual', ' ', '709-888-3722'), ('888AGHE23I456NN55', '2009', 'Pontiac', 'Grand Am', '100000', '6800', 'Blue', 'Automatic', ' ', '653-684-1124'), ('5G33J576NW21CC5H7', '1996', 'Izuzu', 'Trooper', '215000', 2300, 'Orange', '5 Speed Manual', ' ', '703-231-5821');
+INSERT INTO `cars` (`vin`, `year_made`, `make`, `model`, `mileage`, `price`, `color`, `transmission`, `description`, `owner#`) VALUES('15787844787786473', '1999', 'Ford', 'Mustang', '143259', 23000, 'White', '5 Speed Manual', 'fordmustang.jpg', '757-331-4271'), ('123456789AII5699D', '1997', 'Lincoln', 'Town Car', '80000', '5700', 'Black', 'Automatic', 'lincolntowncar.jpg', '434-964-6743'), ('987654321GHD3465K', '2002', 'Toyota', 'Camry', '48000', 4500, 'Red', 'Automatic',  'toyotacamry.jpg', '540-344-6783'), ('8485683248348569HH', '2008', 'Jeep', 'Grand Cherokee', '60000', 7500, 'Green', '5 Speed Manual', 'jeepgrandcherokee.jpg', '709-888-3722'), ('888AGHE23I456NN55', '2003', 'Pontiac', 'Grand Prix', '54000', '5800', 'Blue', 'Automatic', 'pontiacgrandprix.jpg', '653-684-1124'), ('5G33J576NW21CC5H7', '1996', 'Izuzu', 'Trooper', '215000', 2300, 'Gray', '5 Speed Manual', 'izuzutrooper.jpg', '703-231-5821');
