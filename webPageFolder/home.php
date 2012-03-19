@@ -1,3 +1,4 @@
+
 <!DOCTYPE HTML>
 <html>
 <head>
@@ -10,7 +11,7 @@
 <header>
 <ul>
 		<fieldset class= "tab">
-        <li class="tab1"><a href="#home" class="current">Home</a></li>
+        <li class="tab1"><a href="#search" class="current">Search</a></li>
         <li class="tab2"><a href="#add vehicle">Add Vehicle</a></li>
         <li class="tab3"><a href="#log out">Log Out</a></li>
             </ul>
@@ -24,15 +25,22 @@
           <br>
 		  <br>
 		  <br>
+	
+	
 	<form class="panel" method = "post" action = "home.php">
 		<fieldset class="box">
+		
 		  <label>Search by vehicle make: </label>
 		  <br>
 		  <br>
 		  <label>Make</label>
-		  <input type="text" id="make" name="make" />
-		  <!-- <input type="text" tabindex="1" placeholder="Make: " required> -->
+		  
+		   <input type="text" id="make" name="make" tabindex="1" placeholder="Make: " required> 
 		  <br>
+		  <label>Model</label>
+		  <input type="text" id="model" name="model" />
+		  <br>
+		  
 		  <br>
 		  <!-- 
 <br>
@@ -50,15 +58,20 @@
 		<?php
   include "dbconnect.php";
   if (isset($_POST['make']))
+ {
+  if(isset($_Post['model']))
   {
   	$searchterm = $_POST['make'];
   	$searchterm = mysqli_real_escape_string($db, trim($searchterm));
-  	$query = "SELECT * FROM cars WHERE make = '$searchterm' ";
-  	
+  	$searchterm2 = $_POST['model'];
+  	$searchterm2 = mysqli_real_escape_string($db, trim($searchterm2));
+    
+  	//$query = "SELECT * FROM cars WHERE make = '$searchterm' AND model = '$searchterm2' ";
+  	$query = "SELECT * FROM cars ";
   	$result = mysqli_query($db, $query)
    			or die("Error Querying Database");
    			
-   	echo "<table id=\"hor-minimalist-b\">\n<tr><th>Make</th><td></td><th>Model</th><td></td><th>Year</th><td></td><th>Mileage</th><td></td><th>Transmission</th><td></td><th>Owner</th><tr>\n\n";
+   	echo "\n<tr><th>Make</th><th>Model</th><th>Year</th><th>Mileage</th><th>Transmission</th><th>Owner</th><tr>\n\n";
   	
   	while($row = mysqli_fetch_array($result)) {
   			$make = $row['make'];
@@ -67,11 +80,33 @@
   			$mileage = $row['mileage'];
   			$trans = $row['transmission'];
   			$owner = $row['owner#'];
-  			echo "<tr><td >$make </td><td></td><td > $model</td><td></td><td > $year</td><td></td><td > $mileage</td><td></td><td > $trans</td><td></td><td > $owner</td></tr>\n";
+  			echo "<table id=\"hor-minimalist-b\"><tr><td >$make </td><tr><td > $model</td><td > $year</td><td > $mileage</td><td > $trans</td><td > $owner</td></tr>\n";
   	} 
+  	}
+  	else
+  	$searchterm = $_POST['make'];
+  	$searchterm = mysqli_real_escape_string($db, trim($searchterm));
+  	
+  	$query = "SELECT * FROM cars WHERE make = '$searchterm' ";
+  	
+  	$result = mysqli_query($db, $query)
+   			or die("Error Querying Database");
+   	
+   	echo "<table id=\"hor-minimalist-b\">\n<tr><th>Make</th><th>Model</th><th>Year</th><th>Mileage</th><th>Transmission</th><th>Owner</th><tr>\n\n";
+  	
+  	while($row = mysqli_fetch_array($result)) {
+  			$make = $row['make'];
+  			$model = $row['model'];
+  			$year = $row['year_made'];
+  			$mileage = $row['mileage'];
+  			$trans = $row['transmission'];
+  			$owner = $row['owner#'];
+  			echo "<tr><td >$make</td><td > $model</td><td > $year</td><td > $mileage</td><td > $trans</td><td > $owner</td></tr>\n";
+  
+  			} 
+  		
   	 echo "</table>\n"; 
   	}
-  	
   	?>
 	</form>
 	
