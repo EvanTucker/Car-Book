@@ -29,7 +29,7 @@
 	
 	<form class="panel" method = "post" action = "home.php">
 		<fieldset class="box">
-		
+		<div align = "center">
 		  <label>Search by vehicle make: </label>
 		  <br>
 		  <br>
@@ -50,13 +50,13 @@
  -->
 		  <br>
 		  </br>
-		  <div align = "center">
-		  	<input type="submit" class="btnLogin" value="Find Car" tabindex="4">
+		  	<input type="submit" class="btnLogin" value="Find Car" tabindex="4" >
 		  </div>
 		</fieldset>
 		<!--<footer>  -->
 		<?php
   include "dbconnect.php";
+  //
   if (isset($_POST['make']))
  {
   if(isset($_Post['model']))
