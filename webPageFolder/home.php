@@ -66,8 +66,7 @@
   	$searchterm2 = $_POST['model'];
   	$searchterm2 = mysqli_real_escape_string($db, trim($searchterm2));
     
-  	//$query = "SELECT * FROM cars WHERE make = '$searchterm' AND model = '$searchterm2' ";
-  	$query = "SELECT * FROM cars ";
+  	$query = "SELECT * FROM cars WHERE make = '$searchterm' AND model = '$searchterm2' ";
   	$result = mysqli_query($db, $query)
    			or die("Error Querying Database");
    			
