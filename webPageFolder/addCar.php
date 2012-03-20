@@ -22,7 +22,7 @@ session_start();
 <div class="content">
 <!-- CONTENT -->
 <h3>Add Car</h3>
-<form method = "post" action = "newUserComplete.php">
+<form method = "post" action = "addCarComplete.php">
 <table
 <tr><td>Make</td><td><input type = "text" id = "make" name = "make" /></td></tr>
 <tr><td>Model</td><td><input type = "text" id = "model" name = "model" /></td></tr>
@@ -31,10 +31,7 @@ session_start();
 <tr><td>Color</td><td><input type="text" id="color" name="color" /></td></tr>
 <tr><td>Asking Price</td><td><input type="text" id="price" name="price" /></td></tr>
 <tr><td>VIN</td><td><input type="text" name="vin" id="vin"/>
-<tr><td>Transmission:</td><td>
-<input type = "radio" name = "auto" value = "auto" checked/>Automatic<br>
-<input type = "radio" name = "manual" value = "manual"/>Manual<br>
-</td></tr>
+<tr><td>Transmission:</td><td><input type="text" name="trans" id="trans"/>
 <tr><td>&nbsp;</td><td><input type="submit" value="Add" /></td></tr>
 <?php
      //session_start();
