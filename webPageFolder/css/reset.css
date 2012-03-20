@@ -70,7 +70,7 @@ button {  width: auto; overflow: visible; }
 .ie7 img { -ms-interpolation-mode: bicubic; }
 
 body, select, input, textarea {color: #444; }
-a, a:active, a:visited { color: #666; text-decoration:none; }
+a, a:active, a:visited { color: #000; text-decoration:none; }
 a:hover { color: #c00; }
 .ir { display: block; text-indent: -999em; overflow: hidden; background-repeat: no-repeat; text-align: left; direction: ltr; }
 .hidden { display: none; visibility: hidden; }
