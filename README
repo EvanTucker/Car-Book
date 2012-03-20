@@ -1,3 +1,13 @@
 To use this program:
 Source car-book.sql
 Enter the following into your web browser: localhost/CarBook/webPageFolder
+
+Click on "new user" and enter the requested information.
+
+Click to register, then continue; you will be prompted to login with the credentials you
+provided.
+
+Click continue again; you will be directed to the home page, where you may either
+1) add a vehicle to the database 2) search for vehicles via make and model or 3) log out.
+
+Chose one of the options above.  

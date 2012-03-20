@@ -1,6 +1,3 @@
-<?php
-	session_start();
-?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -51,12 +48,11 @@
 						$sellInterest = False;
 					}
 					$yrsOwner = $_POST['ownerLength'];
-					$query = "INSERT INTO users (username, password, firstName, lastName, email, phoneNum, city, locState, vecType, buy, sell, yrsOwn, zipcode) VALUES ('$username', SHA('$password'), '$firstname', '$lastname', '$email', '$phNum', '$city', '$stateLoc', '$status', '$buyInterest', '$sellInterest', '$yrsOwner', '$zipCode')"; 
+					$query = "INSERT INTO users (username, password, firstName, lastName, email, phoneNum, city, locState, vecType, buy, sell, yrsOwn, zipcode) VALUES ('$username', SHA('$pw'), '$firstname', '$lastname', '$email', '$phNum', '$city', '$stateLoc', '$status', '$buyInterest', '$sellInterest', '$yrsOwner', '$zipCode')"; 
 					$result = mysqli_query($db, $query) or die("Error Querying Database");
 					
 					mysqli_close($db);
 					
-					//echo "<p>QUERY $query </p>";		
 					?>
 					
 					

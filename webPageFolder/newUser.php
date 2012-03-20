@@ -1,12 +1,9 @@
-<?php
-	session_start();
-?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
 <title>carBook Home</title>
-<link rel="stylesheet" href="demo.css" type="text/css" />
+<link rel="stylesheet" type="text/css" href="demo.css">
 
 
 </head>
@@ -100,10 +97,12 @@
 					</br>
 					</br>
 					<tr><td>&nbsp;</td><td><input type="submit" value="Register" /></td></tr>
-					<?php
+					<!-- 
+<?php
     					//session_start();
     					$_SESSION['firstname'] = $_POST['firstname'];
     				?>
+ -->
 					</table>
 					
 					</form>
@@ -129,4 +128,3 @@
 </body>
 </html>
 
-GRANT all priviledges on campus_meetup.* to 'username' @ 'localhost' identified by 'pw';
