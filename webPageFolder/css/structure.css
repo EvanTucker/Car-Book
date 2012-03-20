@@ -24,7 +24,7 @@ body{
     -moz-box-shadow:rgba(0,0,0,0.15) 0 0 1px;
     -webkit-box-shadow:rgba(0,0,0,0.15) 0 0 1px;
     box-shadow:rgba(0,0,0,0.15) 0 0 1px;
-    color:#444;
+    color:#FFFFFF;
     font:normal 12px/14px Arial, Helvetica, Sans-serif;
     margin:0 auto 30px;
 	overflow:hidden;
@@ -58,11 +58,13 @@ body{
 }
 .box label
 {
+	color:#FFFFFF
     display:block;
     font:14px/22px Arial, Helvetica, Sans-serif;
     margin:10px 0 0 6px;
 }
 .box footer label{
+	color: F
 	float:left;
 	margin:4px 0 0;
 }
@@ -139,7 +141,7 @@ body{
     -webkit-box-shadow:inset rgba(255,255,255,0.6) 0 1px 1px, rgba(0,0,0,0.1) 0 1px 1px;
     box-shadow:inset rgba(255,255,255,0.6) 0 1px 1px, rgba(0,0,0,0.1) 0 1px 1px;
     margin-left:12px;
-    float:right;
+    float:none;
 	padding:7px 21px;
 }
 
