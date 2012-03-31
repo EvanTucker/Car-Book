@@ -60,3 +60,21 @@ CREATE TABLE IF NOT EXISTS `carOwnership` (
 	FOREIGN KEY (`vin`) REFERENCES `cars` (`vin`)
 );
 INSERT INTO `carOwnership`(`id`, `vin`) VALUES (1, '15787844787786473'), (1, '123456789AII5699D'), (1, '987654321GHD3465K'), (1,'8485683248348569HH'), (1, '888AGHE23I456NN55');
+
+CREATE TABLE IF NOT EXISTS 'location' (
+'zipcode' int(5) NOT NULL,
+'city' varchar(20),
+'locState' char(2),
+FOREIGN KEY ('zipcode') REFERENCES 'users' ('zipcode')
+);
+
+INSERT INTO 'location' ('zipcode', 'city', 'locState') VALUES (23173, 'Richmond', 'VA');
+
+CREATE TABLE IF NOT EXISTS 'carInfo' (
+'make' VARCHAR(20),
+'model' VARCHAR(20),
+FOREIGN KEY ('model') REFERENCES 'cars' ('model')
+);
+
+INSERT INTO 'carInfo' ('make', 'model') VALUES ('Ford', 'Mustang'), ('Lincoln', 'Town Car'), ('Toyota', 'Camry'), ('Jeep', 'Grand Cherokee'), ('Pontiac', 'Grand Prix'), ('Izuzu', 'Trooper');
+
