@@ -70,7 +70,7 @@ session_start();
   	$searchterm2 = $_POST['model'];
   	$searchterm2 = mysqli_real_escape_string($db, trim($searchterm2));
   	
-    $query = "Select n.firstName, n.lastName, u.phoneNum, CI.make, CI.model, CI.year_model, c.mileage FROM nameid AS n INNER JOIN users AS u ON n.userID = u.userID INNER JOIN carOwnership AS CO ON u.userID = CO.id INNER JOIN cars AS c ON CO.vin = c.vin INNER JOIN carid AS CI ON CI.vin = c.vin WHERE CI.make = 'searchterm' AND CI.model = 'searchterm2';";
+    $query = "Select n.firstName, n.lastName, u.phoneNum, CI.make, CI.model, CI.year_model, c.mileage FROM nameid AS n INNER JOIN users AS u ON n.userID = u.userID INNER JOIN carOwnership AS CO ON u.userID = CO.id INNER JOIN cars AS c ON CO.vin = c.vin INNER JOIN carid AS CI ON CI.vin = c.vin WHERE CI.make = '$searchterm' AND CI.model = '$searchterm2';";
   	$result = mysqli_query($db, $query)
    			or die("Error Querying Database");
    			 
@@ -89,17 +89,21 @@ session_start();
   	} 
   	}
   	else
+  	
 	$searchterm = $_POST['make'];
+	
   	$searchterm = mysqli_real_escape_string($db, trim($searchterm));
   	$searchterm2 = $_POST['model'];
+  	
   	$searchterm2 = mysqli_real_escape_string($db, trim($searchterm2));
   	
-  	$query = "Select n.firstName, n.lastName, u.phoneNum, CO.vin, CI.make, CI.model, CI.year_model, c.mileage, c.transmission FROM nameid AS n INNER JOIN users AS u ON n.userID = u.userID INNER JOIN carOwnership AS CO ON u.userID = CO.id INNER JOIN cars AS c ON CO.vin = c.vin INNER JOIN carid AS CI ON CI.vin = c.vin;";
+  	$query = "Select n.firstName, n.lastName, u.phoneNum, CO.vin, CI.make, CI.model, CI.year_model, c.mileage, c.transmission FROM nameid AS n INNER JOIN users AS u ON n.userID = u.userID INNER JOIN carOwnership AS CO ON u.userID = CO.id INNER JOIN cars AS c ON CO.vin = c.vin INNER JOIN carid AS CI ON CI.vin = c.vin WHERE CI.make = '$searchterm' AND CI.model = '$searchterm2';";
   	// $query = "SELECT * FROM cars WHERE make = '$searchterm' ";
   	//$idNum = $_SESSION['idNum'];	
   	$result = mysqli_query($db, $query)
    			or die("Error Querying Database");	
    	echo "<table id=\"hor-minimalist-b\">\n<tr><th></th><th>First Name</th><th>Last Name</th><th>Phone #</th><th>Make</th><th>Model</th><th>Year</th><th>Mileage</th><th>Transmission</th><tr>\n\n";
+  	
   	
   	while($row = mysqli_fetch_array($result)) {
   			
@@ -112,11 +116,11 @@ session_start();
    			$fname = $row['firstName'];
    			$lname = $row['lastName'];
    			$phNum = $row['phoneNum'];
-   			}
+   			
    			
   			
   			echo "<tr><td ><td > $fname</td><td > $lname</td><td > $phNum</td><td> $make</td><td > $model</td><td > $year</td><td > $mileage</td><td > $trans</td></tr>\n";
-  
+  }
   			} 
   		
   	 echo "</table>\n"; 
