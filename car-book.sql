@@ -44,6 +44,8 @@ CREATE TABLE IF NOT EXISTS `cars` (
 
 );
 
+CREATE INDEX make ON cars (make);
+
 INSERT INTO `cars` (`vin`, `year_made`, `make`, `model`, `mileage`, `price`, `color`, `transmission`, `description`) VALUES('15787844787786473', '1999', 'Ford', 'Mustang', '143259', 23000, 'White', '5 Speed Manual', 'fordmustang.jpg'), ('123456789AII5699D', '1997', 'Lincoln', 'Town Car', '80000', '5700', 'Black', 'Automatic', 'lincolntowncar.jpg'), ('987654321GHD3465K', '2002', 'Toyota', 'Camry', '48000', 4500, 'Red', 'Automatic',  'toyotacamry.jpg'), ('8485683248348569HH', '2008', 'Jeep', 'Grand Cherokee', '60000', 7500, 'Green', '5 Speed Manual', 'jeepgrandcherokee.jpg'), ('888AGHE23I456NN55', '2003', 'Pontiac', 'Grand Prix', '54000', '5800', 'Blue', 'Automatic', 'pontiacgrandprix.jpg'), ('5G33J576NW21CC5H7', '1996', 'Izuzu', 'Trooper', '215000', 2300, 'Gray', '5 Speed Manual', 'izuzutrooper.jpg');
 
 CREATE TABLE IF NOT EXISTS `carOwnership` (
@@ -58,3 +60,21 @@ CREATE TABLE IF NOT EXISTS `carOwnership` (
 	FOREIGN KEY (`vin`) REFERENCES `cars` (`vin`)
 );
 INSERT INTO `carOwnership`(`id`, `vin`) VALUES (1, '15787844787786473'), (1, '123456789AII5699D'), (1, '987654321GHD3465K'), (1,'8485683248348569HH'), (1, '888AGHE23I456NN55');
+
+CREATE TABLE IF NOT EXISTS 'location' (
+'zipcode' int(5) NOT NULL,
+'city' varchar(20),
+'locState' char(2),
+FOREIGN KEY ('zipcode') REFERENCES 'users' ('zipcode')
+);
+
+INSERT INTO 'location' ('zipcode', 'city', 'locState') VALUES (23173, 'Richmond', 'VA');
+
+CREATE TABLE IF NOT EXISTS 'carInfo' (
+'make' VARCHAR(20),
+'model' VARCHAR(20),
+FOREIGN KEY ('model') REFERENCES 'cars' ('model')
+);
+
+INSERT INTO 'carInfo' ('make', 'model') VALUES ('Ford', 'Mustang'), ('Lincoln', 'Town Car'), ('Toyota', 'Camry'), ('Jeep', 'Grand Cherokee'), ('Pontiac', 'Grand Prix'), ('Izuzu', 'Trooper');
+
