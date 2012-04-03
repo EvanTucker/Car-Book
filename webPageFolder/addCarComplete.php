@@ -37,18 +37,19 @@ $transmission = $_POST['trans'];
 // $query = "INSERT INTO cars (make, model, year_made, mileage, color, price, vin, transmission) 
 // VALUES ('$make', '$model', '$year', '$mileage', '$color', '$price', '$vin', '$transmission')";
 
-$query = "INSERT INTO cars (vin, mileage, price, color, transmission, description) VALUES
-('$vin`, `$mileage', '$price', '$color', '$transmission')";
+$query = "INSERT INTO cars (vin, mileage, price, color, transmission) VALUES ('$vin', '$mileage', '$price', '$color', '$transmission')";
 
 $query2 = "INSERT INTO carOwnership (id, vin) VALUES ('$id', '$vin')";
 
 $query3 = "INSERT INTO carid (vin, make, model, year_model) VALUES
-('$vin', '$model', '$year')";
+('$vin', '$make', '$model', '$year')";
 
 
-$result = mysqli_query($db, $query) or die("Error Querying Database1");
+$result = mysqli_query($db, $query) or die("Error Querying Database 1");
 $result2 = mysqli_query($db, $query2) or die("Error Querying Database2");
 $result3 = mysqli_query($db, $query3) or die("Error Querying Database3");
+
+
 
 mysqli_close($db);
 

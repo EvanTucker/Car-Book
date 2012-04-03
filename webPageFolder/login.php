@@ -43,8 +43,8 @@ setcookie('id',$post['zip'] , time() + 60*60*24);
    			
   		    if ($row = mysqli_fetch_array($result))
    			{
-  			$_SESSION['idNum'] = $row['id'];
-  			$id2 = $row['id'];
+  			// $_SESSION['idNum'] = $row['id'];
+  			$id2 = $row['userID'];
   			$fName = $row['firstName'];
   			$lName = $row['lastName'];
   			
