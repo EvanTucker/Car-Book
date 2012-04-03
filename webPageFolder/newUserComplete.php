@@ -53,7 +53,7 @@
 					
 					$query = "INSERT INTO users (username, password, email, phoneNum, vecType, buy, sell) VALUES ('$username', SHA('$pw'), '$email', '$phNum', '$status', '$buyInterest', '$sellInterest')"; 
 					$result = mysqli_query($db, $query) or die("Error Querying Database");
-					$search = "SELECT userID FROM users WHERE firstName= '$firstname' AND lastName
+			
 					$query2 = "INSERT INTO nameid (firstName, lastName) VALUES ('$firstname', '$lastname')";
 					$result2 = mysqli_query($db, $query2) or die("Error Querying Database");
 					$query3 = "INSERT INTO locid (city, zipcode, locState) VALUES ('$city', '$zipCode', '$stateLoc')";
