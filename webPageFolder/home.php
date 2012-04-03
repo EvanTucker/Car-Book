@@ -8,20 +8,20 @@ session_start();
 <meta charset="UTF-8" />
 <meta name="Designer" content="PremiumPixels.com">
 <meta name="Author" content="$hekh@r d-Ziner, CSSJUNTION.com">
-<!-- 
+
 <link rel="stylesheet" type="text/css" href="css/reset.css">
 <link rel="stylesheet" type="text/css" href="css/structure.css">
- -->
-<header>
+ 
+</head>
+<body >
 <ul>
-		<fieldset class= "tab">
-        <li class="tab1"><a href="home.php"  class="current" >Search</a></li>
-        <li class="tab2"><a  href="addCar.php" class = "current" action ="addCar.php">Add Vehicle</a></li>
-        <li class="tab3"><a  href="index.html" class = "current" action = "index.php" >Log Out</a></li>
-            </ul>
-<body bgcolor = "Silver">
-</br>
-</br>
+        <li class="tabs"><a href="home.php"  action = "home.php">Search</a></li>
+        <li class="tabs"><a  href="addCar.php"  action ="addCar.php" >Add Vehicle</a></li>
+        <li ><a  href="index.html"  action = "index.php" >Log Out</a></li>
+
+ </ul>         
+
+
 <div align = "center">
 	<img src="logo.jpg" alt="logo" />
 </div>
@@ -30,7 +30,7 @@ session_start();
 		  <br>
 		  <br>
 	
-	
+	<box>
 	<form class="panel" method = "post" action = "home.php">
 		<fieldset class="box">
 		<div align = "center">
@@ -122,9 +122,10 @@ session_start();
   	}
   	?>
 	</form>
+	</box>
 	
 <footer id="main">
-  <a>Kevin Tyler, Evan Tucker, Sally Mathis, and Steve Walsch</a> | <a href="http://www.premiumpixels.com">Base Layout Powered by CSS Junction and Premium Pixels</a>
+  <a>Kevin Tyler, Evan Tucker, Sally Mathis, and Steve Walsh</a> | <a href="http://www.premiumpixels.com">Base Layout Powered by CSS Junction and Premium Pixels</a>
 </footer>
 <TAGNAME bgcolor="value">
 </body>

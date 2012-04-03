@@ -6,7 +6,8 @@ session_start();
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
 <title>Car Posted</title>
-<link rel="stylesheet" href="demo.css" type="text/css" />
+<link rel="stylesheet" type="text/css" href="css/reset.css">
+<link rel="stylesheet" type="text/css" href="css/structure.css">
 
 </head>
 <body bgcolor = "Silver">

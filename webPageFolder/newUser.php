@@ -121,7 +121,7 @@
 </div>
 <footer id="main">
 	<div align = "center".
-  		<a>Kevin Tyler, Evan Tucker, Sally Mathis, and Steve Walsch</a> | <a href="http://www.premiumpixels.com">Base Layout Powered by CSS Junction and Premium Pixels</a>
+  		<a>Kevin Tyler, Evan Tucker, Sally Mathis, and Steve Walsh</a> | <a href="http://www.premiumpixels.com">Base Layout Powered by CSS Junction and Premium Pixels</a>
 	</div>
 </footer>
 
