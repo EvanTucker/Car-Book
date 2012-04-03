@@ -1,4 +1,7 @@
 To use this program:
+
+This program works best using firefox, some browsers may show all font colors.
+
 Source car-book.sql
 Enter the following into your web browser: localhost/CarBook/webPageFolder
 
