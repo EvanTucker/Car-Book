@@ -3,7 +3,8 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
 <title>Registration Complete</title>
-<link rel="stylesheet" href="demo.css" type="text/css" />
+<link rel="stylesheet" type="text/css" href="css/reset.css">
+<link rel="stylesheet" type="text/css" href="css/structure.css">
 
 </head>
 <body bgcolor = "Silver">
@@ -12,9 +13,10 @@
 		<div class="innerpagewrapper">
 			<div class="page">
 				<div class="content">
-				
+				<form class="box" method = "post" action = "login.php">
+				<fieldset class="boxBody">
 					<!-- CONTENT -->
-					<h3>You have successfully completed new user registration. </h3>
+					<label>You have successfully completed new user registration. </label>
 					<p></p>
 					
 					<label><a href="index.html" class="rLink" tabindex="5">Proceed to login page</a></label>
@@ -56,7 +58,7 @@
 					?>
 					
 					
-					
+					</fieldset>
 					</form>
 					<!-- END CONTENT -->
 					

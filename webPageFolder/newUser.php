@@ -3,7 +3,8 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
 <title>carBook Home</title>
-<link rel="stylesheet" type="text/css" href="demo.css">
+<link rel="stylesheet" type="text/css" href="css/reset.css">
+<link rel="stylesheet" type="text/css" href="css/structure.css">
 
 
 </head>
@@ -17,7 +18,8 @@
 		<div class="innerpagewrapper">
 			<div class="page">
 				<div class="content">
-				
+				<form class="box " method = "post" action = "login.php">
+				<fieldset class="box body">
 					<!-- CONTENT -->
 					<h3>New User Registration</h3>
 					
@@ -104,7 +106,7 @@
     				?>
  -->
 					</table>
-					
+					</fieldset>
 					</form>
 					<!-- END CONTENT -->
 					

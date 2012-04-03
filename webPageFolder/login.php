@@ -9,10 +9,10 @@ setcookie('id',$post['zip'] , time() + 60*60*24);
 <meta charset="UTF-8" />
 <meta name="Designer" content="PremiumPixels.com">
 <meta name="Author" content="$hekh@r d-Ziner, CSSJUNTION.com">
-<!-- 
+ 
 <link rel="stylesheet" type="text/css" href="css/reset.css">
 <link rel="stylesheet" type="text/css" href="css/structure.css">
- -->
+
 </head>
 
 <body bgcolor = "Silver">
