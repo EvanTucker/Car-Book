@@ -17,9 +17,11 @@ session_start();
 <div class="page">
 <div class="content">
 <!-- CONTENT -->
-<h3>You have added a car for sale. </h3>
+<form class="box" method = "post" action = "login.php" >
+<fieldset class="boxBody">
+
 <p></p>
-<label><a href="home.php" class="rLink" tabindex="5">Return to main page.</a></label>
+<label><a href="home.php" class="rLink" tabindex="5">Your Car Had Been Added: Click Here To Return to main page.</a></label>
 <?php
 include('dbconnect.php');
 $id = $_SESSION['idNum'];
@@ -41,6 +43,7 @@ mysqli_close($db);
 
 //echo "<p>QUERY $query </p>";
 ?>
+</fieldset>
 </form>
 <!-- END CONTENT -->
 </div>

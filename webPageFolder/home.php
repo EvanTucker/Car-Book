@@ -11,18 +11,20 @@ session_start();
 
 <link rel="stylesheet" type="text/css" href="css/reset.css">
 <link rel="stylesheet" type="text/css" href="css/structure.css">
- 
-</head>
-<body >
+
 <ul>
         <li class="tabs"><a href="home.php"  action = "home.php">Search</a></li>
         <li class="tabs"><a  href="addCar.php"  action ="addCar.php" >Add Vehicle</a></li>
         <li ><a  href="index.html"  action = "index.php" >Log Out</a></li>
 
- </ul>         
+ </ul>  
+ 
+</head>
+
+        
 
 
-<div align = "center">
+<div align = "left">
 	<img src="logo.jpg" alt="logo" />
 </div>
 	
@@ -30,27 +32,32 @@ session_start();
 		  <br>
 		  <br>
 	
-	<box>
-	<form class="panel" method = "post" action = "home.php">
-		<fieldset class="box">
+	
+	
 		<div align = "center">
-		  <label>Search by vehicle make and model (both required): </label>
+		<form class="box" method = "post" action = "home.php" >
+		<fieldset class="boxbody" >
+		
+		  <label >Search by vehicle make and model (both required): </label>
 		  <br>
 		  <br>
-		  <label>Make</label>
-		  
-		   <input type="text" id="make" name="make" tabindex="1" placeholder="Make: " required> 
+		  <label >Make</label>
 		  <br>
-		  <label>Model</label>
+		  <input type="text" id="make" name="make" tabindex="4" placeholder="Make: " required align = "center"> 
+		  <br>
+		  <label >Model</label>
 		  <input type="text" id="model" name="model" />
 		  <br>
-		  <input type="submit" class="btnLogin" value="Find Car" tabindex="4" align = "center">
+		  <input type="submit" class="btnLogin" value="Find Car" tabindex="1" align = "center" action = "addCarComplete.php">
 		  <br>
 		  <br>
 		  </br>
-		  </div>
+		 
 		</fieldset>
-		<div align = "center"> 
+		</form>
+		</div>
+		<!-- <div align = "center">  -->
+		<form class = "box">
 		<?php
   include "dbconnect.php";
   //
@@ -122,7 +129,7 @@ session_start();
   	}
   	?>
 	</form>
-	</box>
+	
 	
 <footer id="main">
   <a>Kevin Tyler, Evan Tucker, Sally Mathis, and Steve Walsh</a> | <a href="http://www.premiumpixels.com">Base Layout Powered by CSS Junction and Premium Pixels</a>
