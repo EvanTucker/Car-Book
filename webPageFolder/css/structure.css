@@ -10,9 +10,48 @@
   ✰✰✰✰✰✰✰✰✰✰✰✰✰✰✰ 
   
 */
+a{
+	color:#808080;
+	}
+ul{
+list-style-type: none;
+
+}
+
+li{
+float:left;
+width: 127px;
+}
+
+
+li a{
+	color:#FFF;
+	}
+	
+th {
+color= #FFF;
+margin: 0 auto;
+width: 90px;
+
+}
+td {
+color = #FFF;
+margin: 0 auto;
+width: 100px;
+}
+tr {
+color = #FFF;
+margin: 0 auto;
+width: 100px;
+}
+
 body{
   background:#000000;
 }
+
+.body label{
+	color= #FFF;
+	}
 .box
 {
     background:##909090;
@@ -58,10 +97,11 @@ body{
 }
 .box label
 {
-	color:#FFFFFF
+	color:#808080;
     display:block;
     font:14px/22px Arial, Helvetica, Sans-serif;
     margin:10px 0 0 6px;
+    float:none;
 }
 .box footer label{
 	color: F
