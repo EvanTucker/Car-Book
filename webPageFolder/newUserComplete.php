@@ -50,9 +50,13 @@
 						$sellInterest = False;
 					}
 					$yrsOwner = $_POST['ownerLength'];
-					$query = "INSERT INTO users (username, password, firstName, lastName, email, phoneNum, city, locState, vecType, buy, sell, yrsOwn, zipcode) VALUES ('$username', SHA('$pw'), '$firstname', '$lastname', '$email', '$phNum', '$city', '$stateLoc', '$status', '$buyInterest', '$sellInterest', '$yrsOwner', '$zipCode')"; 
-					$result = mysqli_query($db, $query) or die("Error Querying Database");
 					
+					$query = "INSERT INTO users (username, password, email, phoneNum, vecType, buy, sell) VALUES ('$username', SHA('$pw'), '$email', '$phNum', '$status', '$buyInterest', '$sellInterest')"; 
+					$result = mysqli_query($db, $query) or die("Error Querying Database");
+					$query2 = "INSERT INTO nameid (firstName, lastName) VALUES ('$firstname', '$lastname')";
+					$result2 = mysqli_query($db, $query2) or die("Error Querying Database");
+					$query3 = "INSERT INTO locid (city, zipcode, locState) VALUES ('$city', '$zipCode', '$stateLoc')";
+					$result3 = mysqli_query($db, $query3) or die("Error Querying Database");
 					mysqli_close($db);
 					
 					?>
