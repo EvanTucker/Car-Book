@@ -59,6 +59,18 @@ CREATE TABLE IF NOT EXISTS `carid` (
 	`year_model` CHAR(4),
 	FOREIGN KEY(`vin`) REFERENCES `cars`(`vin`)
 );
+CREATE TABLE IF NOT EXISTS `carOwnership` (
+	`id` int(11) NOT NULL,
+	`vin` CHAR(17) NOT NULL,
+	CONSTRAINT `PK_carOwnership` PRIMARY KEY
+	(
+		`id`,
+		`vin`
+	),
+	FOREIGN KEY (`id`) REFERENCES `users` (`UserID`),
+	FOREIGN KEY (`vin`) REFERENCES `cars` (`vin`)
+);
+INSERT INTO `carOwnership`(`id`, `vin`) VALUES (1, '15787844787786473'), (1, '123456789AII5699D'), (1, '987654321GHD3465K'), (1,'8485683248348569HH'), (1, '888AGHE23I456NN55');
 INSERT INTO `carid` (`vin`, `make`, `model`, `year_model`) VALUES
 	('15787844787786473', 'Ford', 'Mustang', '1999'),
 	('123456789AII5699D', 'Lincoln', 'Town Car', '1997'),
