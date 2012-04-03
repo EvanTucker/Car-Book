@@ -1,8 +1,11 @@
 To use this program:
 
-This program works best using firefox, some browsers may show all font colors.
+This program works best using firefox, some browsers may not show all font colors.
+
+clone repository: git@github.com:EvanTucker/Car-Book.git
 
 Source car-book.sql
+
 Enter the following into your web browser: localhost/CarBook/webPageFolder
 
 Click on "new user" and enter the requested information.
