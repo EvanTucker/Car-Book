@@ -14,28 +14,28 @@ CREATE TABLE IF NOT EXISTS `users` (
   `sell` boolean,
   PRIMARY KEY (`userID`)
 )ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=1;
-INSERT INTO `users` (`userID`, `username`, `password`, `email`,
+INSERT INTO `users` ( `username`, `password`, `email`,
 	`phoneNum`, `vecType`, `buy`, `sell`) VALUES
-(1, 'ktyler', SHA('healthy'), 'celloguy009@yahoo.com', '757-331-4271', 'N', 'TRUE', 
+( 'ktyler', SHA('healthy'), 'celloguy009@yahoo.com', '757-331-4271', 'N', 'TRUE', 
 'FALSE');
 CREATE TABLE IF NOT EXISTS `nameid` (
-	`userID` int(11) NOT NULL PRIMARY KEY,
+	`userID` int(11) NOT NULL PRIMARY KEY AUTO_INCREMENT,
 	`firstName` varchar(20) NOT NULL,
 	`lastName` varchar(20) NOT NULL,
 	FOREIGN KEY (`userID`) REFERENCES `users` (`userID`)
-);
-INSERT INTO `nameid` (`userID`, `firstName`, `lastName`) VALUES
-(1, 'Kevin', 'Tyler');
+)ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=1;
+INSERT INTO `nameid` ( `firstName`, `lastName`) VALUES
+( 'Kevin', 'Tyler');
 
 CREATE TABLE IF NOT EXISTS `locid` (
-	`userID` int(11) NOT NULL PRIMARY KEY,
+	`userID` int(11) NOT NULL PRIMARY KEY AUTO_INCREMENT,
 	`city` varchar(20),
 	`zipcode` int(5) NOT NULL,
 	`locState` char(2),
 	FOREIGN KEY (`userID`) REFERENCES `users` (`userID`)
-);
-INSERT INTO `locid` (`userID`, `city`, `zipcode`, `locState`) VALUES
-(1, 'Richmond', 22172, 'Virginia');
+)ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=1;
+INSERT INTO `locid` ( `city`, `zipcode`, `locState`) VALUES
+( 'Richmond', 22172, 'Virginia');
 
 CREATE TABLE IF NOT EXISTS `cars` (
   `vin` CHAR(17) NOT NULL PRIMARY KEY,
@@ -81,15 +81,3 @@ INSERT INTO `carid` (`vin`, `make`, `model`, `year_model`) VALUES
 ;
 
 CREATE INDEX make ON carid (make);
--- 
--- INSERT INTO `cars` (`vin`, `year_made`, `make`, `model`, `mileage`, `price`, `color`, `transmission`, `description`) 
--- VALUES('15787844787786473', '1999', 'Ford', 'Mustang', '143259', 23000, 'White', '5 Speed Manual', 'fordmustang.jpg'),
---  ('123456789AII5699D', '1997', 'Lincoln', 'Town Car', '80000', '5700', 'Black', 'Automatic', 'lincolntowncar.jpg'),
---  ('987654321GHD3465K', '2002', 'Toyota', 'Camry', '48000', 4500, 'Red', 'Automatic',  'toyotacamry.jpg'),
---  ('8485683248348569HH', '2008', 'Jeep', 'Grand Cherokee', '60000', 7500, 'Green', '5 Speed Manual', 'jeepgrandcherokee.jpg'),
---  ('888AGHE23I456NN55', '2003', 'Pontiac', 'Grand Prix', '54000', '5800', 'Blue', 'Automatic', 'pontiacgrandprix.jpg'),
---  ('5G33J576NW21CC5H7', '1996', 'Izuzu', 'Trooper', '215000', 2300, 'Gray', '5 Speed Manual', 'izuzutrooper.jpg');
-
--- INSERT INTO `carid` (`make`, `model`, `year_model`) 
--- VALUES('Ford', 'Mustang' '1999'), 
--- ('Lincoln', 'Town Car', '1997')
