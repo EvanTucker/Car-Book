@@ -18,7 +18,7 @@
 		<div class="innerpagewrapper">
 			<div class="page">
 				<div class="content">
-				<form class="box " method = "post" action = "login.php">
+				<form class="box " method = "post" action = "newUserComplete.php">
 				<fieldset class="box body">
 					<!-- CONTENT -->
 					<h3>New User Registration</h3>
